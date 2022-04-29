@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Project Details - Personal Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume - v4.7.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= project Details Section ======= -->
+    <section id="project-details" class="project-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="project-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                    <img src="assets/img/projects/p4-fourth-pic.png" alt="">
+                  </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/p4-main-pic.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/p4-second-pic.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/projects/p4-third-pic.png" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="project-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Project Name</strong>: Quizzical</li>
+                <li><strong>Project URL</strong>: <a href="https://quizzical42.netlify.app/" target="_blank">https://quizzical42.netlify.app/</a></li>
+                <li><strong>GitHub URL</strong>: <a href="https://github.com/mashaw22/Quizzical.git" target="_blank">https://github.com/mashaw22/Quizzical.git</a></li>
+              </ul>
+            </div>
+            <div class="project-description">
+              <h2>What is Quizzical?</h2>
+              <p>
+                Quizzical is a React application that generates 5 randomly selected questions from the Open Trivia Database API for a user to test their trivia knowledge. The user can check their answers and then generate an endless set of quizzes.
+              </p>
+              <h2>Achievements</h2>
+              <p>
+                This project pushed me to not only synthesize my recently acquired skills in React hooks and functional components, but also to develop my ability to break problems down into smaller parts. This was a bigger project than I'm used to, culminating in more than a week's worth of trial and error.
+              </p>
+              <h2>Stumbling Blocks</h2>
+              <p>
+                There were two main roadblocks for me during this project: holding each individually selected answer choice in state, and displaying the number of correct answers at the end of the quiz. 
+              </p>
+              <p>
+                For the first issue, I had to get around the different layers of data to reach the answers data using the map() method and event.target. At the second level, I isolated the current question and answer set by comparing the selected answer's parentNode.id to the id in the mapped array. Once I crossed that barrier, I looked for the answer choice that matched the selected choice's textContent to alter the appearance of the clicked choice. 
+              </p>
+
+              <p>
+                Displaying the number of correct answers took longer to solve.  I alternated from receiving the score from the Answers component or from the main App component.  However, when I tried to save the state of the score in Answers.js, the returned state would run endlessly and crash the quiz. Ultimately, I settled on storing the selected answer as a key in the quiz's state, then compared the selected answer to the correct answer and incremented the score when the two keys matched up. 
+              </p>
+
+              <h2>Future Enhancements</h2>
+              <p>
+                 I believe there has to be a better way to organize the quiz state data so as to not use the selected and correct answers in multiple spots.
+              </p>
+              <p>
+                 Further, after learning about React Router, I realized I could place my overlay and main content into two different routes rather than changing the display style of the overlay and working around the quirks of the colored blobs on the screen.
+              </p>
+              <p>
+                 Finally, the OTBD API allows for the developer to change the number of questions returned, the category, and the difficulty.  Implementing a component for the user to customize their own game would require altering the endpoints of the url to be more dynamic and altering the display of the questions within a single page or mutliple pages depending on the number of questions requested.
+              </p>
+
+
+              <!-- Add more information about what problem I was trying to solve. -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End project Details Section -->
+
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
